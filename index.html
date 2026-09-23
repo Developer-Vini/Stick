@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Sticker Wall</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>My Sticker Wall</h1>
+        <p>A collection of my favorite stickers and memories.</p>
+    </header>
+
+    <main>
+
+        <section class="sticker-picker">
+
+            <h2>Choose a sticker</h2>
+            <div id="stickerList"></div>
+
+        </section>
+
+
+        <section class="mural-container">
+
+            <svg id="mural" viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+            </svg>
+
+        </section>
+    </main>
+    <div id="nameModal" class="modal hidden">
+
+        <div class="modal-content">
+            <h2>Claim this spot</h2>
+            <label for="username">
+                Your name
+            </label>
+            <input type="text" id="username" placeholder="Enter your name" maxlength="20">
+            <div class="modal-buttons">
+                <button id="cancelButton">
+                    Cancel
+                </button>
+                <button id="confirmButton">
+                    Confirm
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="scrtpt.js"></script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background: #111;
+    color: white;
+}
+
+header {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin: 0 0 8px;
+}
+
+header p {
+    margin: 0;
+
+    color: #aaa;
+}
+
+main {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+.sticker-picker {
+    margin-bottom: 20px;
+}
+
+.sticker-picker h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#stickerList {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.sticker-option {
+    width: 70px;
+    height: 70px;
+    padding: 8px;
+    background: #1c1c1c;
+    border: 2px solid #333;
+    border-radius: 10px;
+    cursor: pointer;
+    object-fit: contain;
+    transition: 0.15s;
+}
+
+.sticker-option:hover {
+    border-color: #777;
+    transform: translateY(-2px);
+}
+
+.sticker-option.selected {
+    border-color: white;
+}
+
+.mural-container {
+    width: 100%;
+    background: #1a1a1a;
+    border: 2px solid #333;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+#mural {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #181818;
+}
+.cell {
+    fill: #181818;
+    stroke: #292929;
+    stroke-width: 2;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.cell:hover {
+    fill: #242424;
+}
+.modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 100;
+}
+
+.hidden {
+    display: none;
+}
+
+.modal-content {
+    width: 90%;
+    max-width: 400px;
+    padding: 25px;
+    background: #1c1c1c;
+    border: 1px solid #444;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.modal-content h2 {
+    margin-top: 0;
+}
+
+.modal-content label {
+    display: block;
+    margin-bottom: 8px;
+    color: #aaa;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: white;
+    background: #111;
+    border: 1px solid #444;
+    border-radius: 8px;
+    outline: none;
+}
+
+.modal-content input:focus {
+    border-color: #777;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.modal-buttons button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#cancelButton {
+    background: #333;
+    color: white;
+}
+
+#confirmButton {
+    background: white;
+    color: black;
+}
+
+.placed-sticker {
+    pointer-events: none;
+}
+
+.sticker-name {
+    fill: white;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+}
